@@ -24,6 +24,6 @@ COPY . /app/
 # Expose port 8000
 EXPOSE 8000
 
-# Run migrations and collect static files, then start server
+# Run migrations, seed portfolio data, and collect static files, then start server
 # Note: In production, you would run migrations as a release phase.
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn portfolio_project.wsgi:application --bind 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py seed_portfolio && python manage.py collectstatic --noinput && gunicorn portfolio_project.wsgi:application --bind 0.0.0.0:8000"]
