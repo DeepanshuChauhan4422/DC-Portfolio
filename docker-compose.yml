@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - sqlite_data:/app/db_data
+      - media_volume:/app/media
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=django-insecure-docker-compose-dev-key-change-in-prod
+      - ALLOWED_HOSTS=localhost,127.0.0.1,web
+      - GITHUB_USERNAME=DeepanshuChauhan4422
+    restart: always
+
+volumes:
+  sqlite_data:
+  media_volume:

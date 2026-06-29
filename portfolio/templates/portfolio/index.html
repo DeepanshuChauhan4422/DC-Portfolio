@@ -1,0 +1,621 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- 1. HERO SECTION -->
+<section id="home" class="hero-section">
+    <div class="hero-container">
+        <!-- Floating Tech Icons in Background -->
+        <div class="floating-icons">
+            <div class="floating-icon icon-1" title="Python"><i class="devicon-python-plain colored"></i></div>
+            <div class="floating-icon icon-2" title="Django"><i class="devicon-django-plain colored"></i></div>
+            <div class="floating-icon icon-3" title="FastAPI"><i class="devicon-fastapi-plain colored"></i></div>
+            <div class="floating-icon icon-4" title="Docker"><i class="devicon-docker-plain colored"></i></div>
+            <div class="floating-icon icon-5" title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i></div>
+            <div class="floating-icon icon-6" title="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+            <div class="floating-icon icon-7" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
+            <div class="floating-icon icon-8" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-greeting-wrapper">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-title text-gradient">Deepanshu Chauhan</h1>
+            </div>
+            
+            <div class="typewriter-container">
+                <span class="typewriter-text" id="typewriter" data-words='["Full Stack Developer", "AI Application Developer", "Django Developer", "Python Developer", "Software Engineer"]'></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-description">
+                I build intelligent, scalable, and modern web applications with Python, Django, FastAPI, JavaScript, Docker, and modern development tools. Passionate about linking core software engineering with generative AI.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span> <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{% static 'portfolio/resume.pdf' %}" target="_blank" class="btn btn-secondary">
+                    <span>Download Resume</span> <i class="fas fa-file-download"></i>
+                </a>
+                <a href="#contact" class="btn btn-tertiary">
+                    <span>Contact Me</span> <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <a href="#about" aria-label="Scroll to About Section">
+            <div class="mouse-wheel"></div>
+        </a>
+    </div>
+</section>
+
+<!-- 2. ABOUT SECTION -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Discover</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-info-cards">
+                <div class="glass-card about-card">
+                    <div class="about-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Full Stack Journey</h3>
+                    <p>My career objective centers around building intelligent software solutions. I enjoy developing scalable web applications, REST APIs, and backend architectures, while constantly keeping pace with modern development practices.</p>
+                </div>
+                
+                <div class="glass-card about-card">
+                    <div class="about-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Passion for AI</h3>
+                    <p>With a B.Tech specializing in Artificial Intelligence and Machine Learning, I am obsessed with integrating smart workflows, Prompt Engineering, LLM integrations (Gemini, Claude, GPT), and custom AI agent toolkits directly into backend infrastructures.</p>
+                </div>
+
+                <div class="glass-card about-card">
+                    <div class="about-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Future Vision</h3>
+                    <p>I aim to build high-performance distributed systems, containerized cloud applications, and automated AI agents that can solve complex, real-world issues. Why hire me? I bridge the gap between traditional engineering and cutting-edge artificial intelligence.</p>
+                </div>
+            </div>
+
+            <div class="about-stats-container">
+                <div class="glass-card stats-grid-card">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number text-gradient" data-target="30">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Tech Tools</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number text-gradient" data-target="10">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number text-gradient" data-target="3">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Certificates</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number text-gradient" data-target="3">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Achievements</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-brief glass-card">
+                    <h3>Engineering at the Core</h3>
+                    <p>Based in Greater Noida, India, I treat software engineering as an art of problem-solving. Whether it's optimization of queries, writing Dockerfiles, organizing Django MVT models, or scripting API layers, I ensure codebases remain clean, maintainable, and fast loading.</p>
+                    <div class="about-details-list">
+                        <div class="about-detail"><span class="label">Location:</span> <span>Greater Noida, India</span></div>
+                        <div class="about-detail"><span class="label">Education:</span> <span>B.Tech CSE (AI &amp; ML)</span></div>
+                        <div class="about-detail"><span class="label">Email:</span> <span>deepanshuchauhan2244@gmail.com</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. SKILLS SECTION -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Expertise</span>
+            <h2 class="section-title">Skills</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories-grid">
+            <!-- Programming Languages -->
+            {% if grouped_skills.languages %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.languages %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Frontend -->
+            {% if grouped_skills.frontend %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-desktop"></i> Frontend</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.frontend %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Backend -->
+            {% if grouped_skills.backend %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-server"></i> Backend</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.backend %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Database -->
+            {% if grouped_skills.database %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-database"></i> Database</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.database %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- AI Development -->
+            {% if grouped_skills.ai_development %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-brain"></i> AI Development</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.ai_development %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- DevOps -->
+            {% if grouped_skills.devops %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-infinity"></i> DevOps</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.devops %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Computer Science -->
+            {% if grouped_skills.computer_science %}
+            <div class="glass-card skills-category-group">
+                <h3 class="category-title text-gradient"><i class="fas fa-book"></i> Computer Science</h3>
+                <div class="skills-sub-grid">
+                    {% for skill in grouped_skills.computer_science %}
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                {% if skill.icon_svg %}{{ skill.icon_svg|safe }}{% else %}<i class="{{ skill.icon_class }}"></i>{% endif %}
+                            </div>
+                            <h4>{{ skill.name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- 4. FEATURED PROJECTS SECTION -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Showcase</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="glass-card project-card">
+                <div class="project-image-wrapper">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-img">
+                    {% else %}
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    {% endif %}
+                    <div class="project-overlay">
+                        <button class="btn btn-secondary open-modal-btn" data-project-id="{{ project.id }}">
+                            <span>Explore Details</span> <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card-content">
+                    <div class="project-tech-tags">
+                        {% for tech in project.get_tech_list %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <h3 class="project-card-title">{{ project.title }}</h3>
+                    <p class="project-card-description">{{ project.description }}</p>
+                    
+                    <div class="project-card-actions">
+                        {% if project.github_link %}
+                        <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-card-btn" title="GitHub Code">
+                            <i class="fab fa-github"></i> Source
+                        </a>
+                        {% endif %}
+                        {% if project.live_demo_link %}
+                        <a href="{{ project.live_demo_link }}" target="_blank" rel="noopener noreferrer" class="project-card-btn demo" title="Live Demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        {% endif %}
+                        <button class="project-card-btn details-btn open-modal-btn" data-project-id="{{ project.id }}">
+                            <i class="fas fa-info-circle"></i> Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT DETAILS MODAL (Hidden by default) -->
+            <div class="project-modal" id="modal-{{ project.id }}" aria-hidden="true" role="dialog">
+                <div class="project-modal-backdrop close-modal-trigger" data-project-id="{{ project.id }}"></div>
+                <div class="project-modal-content glass-card">
+                    <button class="project-modal-close close-modal-trigger" data-project-id="{{ project.id }}" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
+                    <div class="project-modal-body">
+                        <!-- Left Pane - Images & Architecture -->
+                        <div class="project-modal-visuals">
+                            <div class="modal-image-container">
+                                {% if project.image %}
+                                <img src="{{ project.image.url }}" alt="{{ project.title }}" class="modal-primary-image">
+                                {% else %}
+                                <div class="modal-image-placeholder"><i class="fas fa-laptop-code"></i></div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Screenshots gallery -->
+                            {% if project.screenshots.all %}
+                            <h4 class="modal-subsection-title">Screenshots Gallery</h4>
+                            <div class="modal-screenshots-carousel">
+                                {% for screenshot in project.screenshots.all %}
+                                <div class="screenshot-slide">
+                                    <img src="{{ screenshot.image.url }}" alt="{{ screenshot.caption|default:project.title }}" class="modal-screenshot-img">
+                                    {% if screenshot.caption %}
+                                    <span class="screenshot-caption">{{ screenshot.caption }}</span>
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <!-- Architecture Diagram -->
+                            {% if project.architecture_diagram %}
+                            <h4 class="modal-subsection-title">System Architecture Diagram</h4>
+                            <div class="modal-architecture-container">
+                                <img src="{{ project.architecture_diagram.url }}" alt="Architecture Diagram for {{ project.title }}" class="modal-architecture-img">
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Right Pane - Texts & Details -->
+                        <div class="project-modal-info">
+                            <span class="modal-project-badge text-gradient">Featured Project</span>
+                            <h3 class="modal-project-title">{{ project.title }}</h3>
+                            
+                            <div class="project-tech-tags">
+                                {% for tech in project.get_tech_list %}
+                                <span class="tech-tag">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+
+                            <h4 class="modal-section-title">Overview</h4>
+                            <p class="modal-text">{{ project.detailed_description }}</p>
+
+                            <h4 class="modal-section-title">Key Features</h4>
+                            <ul class="modal-list">
+                                {% for feature in project.get_features_list %}
+                                <li><i class="fas fa-check-circle text-gradient"></i> <span>{{ feature }}</span></li>
+                                {% endfor %}
+                            </ul>
+
+                            {% if project.challenges_faced %}
+                            <h4 class="modal-section-title">Challenges Faced</h4>
+                            <p class="modal-text text-warning-border">{{ project.challenges_faced }}</p>
+                            {% endif %}
+
+                            {% if project.future_improvements %}
+                            <h4 class="modal-section-title">Future Improvements</h4>
+                            <p class="modal-text text-info-border">{{ project.future_improvements }}</p>
+                            {% endif %}
+
+                            <div class="modal-actions">
+                                {% if project.github_link %}
+                                <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                                {% endif %}
+                                {% if project.live_demo_link %}
+                                <a href="{{ project.live_demo_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                    <i class="fas fa-external-link-alt"></i> Launch Live Site
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- 5. EXPERIENCE SECTION -->
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Career Path</span>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            {% for exp in experiences %}
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">{{ exp.duration }}</div>
+                <div class="timeline-content glass-card">
+                    <span class="experience-company text-gradient">{{ exp.company }}</span>
+                    <h3 class="experience-role">{{ exp.role }}</h3>
+                    <ul class="experience-list">
+                        {% for point in exp.get_description_list %}
+                        <li><i class="fas fa-chevron-right text-gradient"></i> <span>{{ point }}</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% empty %}
+            <div class="no-data-card glass-card text-center">
+                <p>No professional experiences recorded yet.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- 6. EDUCATION SECTION -->
+<section id="education" class="section education-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Academics</span>
+            <h2 class="section-title">Education</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="education-grid">
+            {% for edu in educations %}
+            <div class="glass-card education-card">
+                <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="education-time-badge">{{ edu.duration }}</div>
+                <h3 class="education-degree">{{ edu.degree }}</h3>
+                <span class="education-branch text-gradient">{{ edu.branch }}</span>
+                <h4 class="education-inst">{{ edu.institution }}</h4>
+                <p class="education-desc">{{ edu.academic_journey }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- 7. CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+<section id="achievements" class="section achievements-section">
+    <div class="container">
+        <div class="achievements-double-grid">
+            
+            <!-- Left Side: Certifications -->
+            <div class="certs-container">
+                <div class="section-header left-align">
+                    <span class="section-subtitle text-gradient">Verified Skills</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="certs-list">
+                    {% for cert in certifications %}
+                    <div class="glass-card cert-card">
+                        <div class="cert-icon"><i class="fas fa-certificate text-gradient"></i></div>
+                        <div class="cert-info">
+                            <h3>{{ cert.title }}</h3>
+                            <p class="cert-org">{{ cert.issuing_organization }}</p>
+                            <span class="cert-date"><i class="far fa-calendar-alt"></i> {{ cert.issue_date }}</span>
+                            {% if cert.credential_id %}
+                            <span class="cert-id"><i class="fas fa-fingerprint"></i> ID: {{ cert.credential_id }}</span>
+                            {% endif %}
+                            {% if cert.credential_link %}
+                            <a href="{{ cert.credential_link }}" target="_blank" rel="noopener noreferrer" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Right Side: Achievements -->
+            <div class="achieve-container">
+                <div class="section-header left-align">
+                    <span class="section-subtitle text-gradient">Success Milestones</span>
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="achieve-list">
+                    {% for achieve in achievements %}
+                    <div class="glass-card achieve-card">
+                        <div class="achieve-badge-icon"><i class="fas fa-trophy text-gradient"></i></div>
+                        <div class="achieve-info">
+                            <h3>{{ achieve.title }}</h3>
+                            {% if achieve.ranking_details %}
+                            <span class="achieve-rank"><i class="fas fa-award"></i> {{ achieve.ranking_details }}</span>
+                            {% endif %}
+                            <p>{{ achieve.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- 9. CONTACT SECTION -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle text-gradient">Get In Touch</span>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Card Info -->
+            <div class="contact-info-panel">
+                <div class="glass-card contact-detail-card">
+                    <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail-text">
+                        <h4>Email Me Directly</h4>
+                        <a href="mailto:deepanshuchauhan2244@gmail.com">deepanshuchauhan2244@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-detail-card">
+                    <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-detail-text">
+                        <h4>Location</h4>
+                        <p>Greater Noida, Uttar Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-socials-card">
+                    <h4>Connect on Social Networks</h4>
+                    <div class="contact-social-icons">
+                        <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-circle github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/deepanshu-chauhan-179a40252/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-circle linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.threads.net/@deepanshu._.dc" target="_blank" rel="noopener noreferrer" title="Threads" class="social-circle threads">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                    </div>
+                    
+                    <a href="{% static 'portfolio/resume.pdf' %}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full-width btn-resume">
+                        <i class="fas fa-file-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Glassmorphism Contact Form -->
+            <div class="glass-card contact-form-wrapper">
+                <form id="contact-form" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="form-name">Your Name</label>
+                            <input type="text" id="form-name" name="name" required placeholder="Enter name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Your Email</label>
+                            <input type="email" id="form-email" name="email" required placeholder="name@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-subject">Subject</label>
+                        <input type="text" id="form-subject" name="subject" required placeholder="Project inquiries, hiring, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
+                        <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

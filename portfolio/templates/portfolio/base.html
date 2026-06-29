@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepanshu Chauhan | Full Stack &amp; AI Application Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Deepanshu Chauhan - Full Stack Developer and AI Application Developer. Building intelligent, scalable, and modern web applications using Django, FastAPI, and AI.">
+    <meta name="keywords" content="Deepanshu Chauhan, Deepanshu, Full Stack Developer, AI Developer, Django Developer, Python Developer, Software Engineer, Galgotias University, HCL, Portfolio">
+    <meta name="author" content="Deepanshu Chauhan">
+    <link rel="canonical" href="https://deepanshuchauhan.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deepanshuchauhan.com/">
+    <meta property="og:title" content="Deepanshu Chauhan | Full Stack &amp; AI Developer">
+    <meta property="og:description" content="Building intelligent, scalable, and modern web applications with Python, Django, AI, and modern web technologies.">
+    <meta property="og:image" content="https://deepanshuchauhan.com/static/portfolio/images/og_image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://deepanshuchauhan.com/">
+    <meta property="twitter:title" content="Deepanshu Chauhan | Full Stack &amp; AI Developer">
+    <meta property="twitter:description" content="Building intelligent, scalable, and modern web applications with Python, Django, AI, and modern web technologies.">
+    <meta property="twitter:image" content="https://deepanshuchauhan.com/static/portfolio/images/og_image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'portfolio/images/favicon.ico' %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}?v=1.2">
+</head>
+<body class="dark-theme">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+        })();
+    </script>
+    
+    <!-- Custom Cursor Glow -->
+    <div class="custom-cursor-glow" id="cursor-glow"></div>
+
+    <!-- Animated Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-sphere sphere-1"></div>
+        <div class="aurora-sphere sphere-2"></div>
+        <div class="aurora-sphere sphere-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>DC<span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="{% static 'portfolio/resume.pdf' %}" target="_blank" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" class="nav-link-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Floating AI Assistant Chat Widget -->
+    <div class="ai-chat-widget" id="ai-chat-widget">
+        <button class="ai-chat-bubble" id="ai-chat-bubble" aria-label="Ask AI Assistant">
+            <span class="ai-pulse"></span>
+            <i class="fas fa-robot"></i>
+        </button>
+
+        <div class="ai-chat-window" id="ai-chat-window">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title">
+                    <div class="ai-avatar">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h4>Deepanshu's AI Agent</h4>
+                        <span class="status-online"><span class="dot"></span> Online</span>
+                    </div>
+                </div>
+                <button class="ai-chat-close" id="ai-chat-close" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="ai-chat-messages" id="ai-chat-messages">
+                <div class="chat-message bot">
+                    <div class="message-content">
+                        Hi! I am Deepanshu's AI Assistant. Ask me anything about his skills, experience at HCL, or his AI Healthcare Assistant project!
+                    </div>
+                    <span class="message-time">Just Now</span>
+                </div>
+            </div>
+
+            <div class="ai-chat-input-area">
+                <input type="text" id="ai-chat-input" placeholder="Type a message..." aria-label="Type message to AI Assistant">
+                <button id="ai-chat-send" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Custom Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; {{ current_year }} | Designed &amp; Developed with <i class="fas fa-heart text-gradient"></i> by <span class="text-gradient font-semibold">Deepanshu Chauhan</span></p>
+            <p class="footer-subtext">Built using Python, Django &amp; Custom Vanilla Glassmorphism UI</p>
+        </div>
+    </footer>
+
+    <!-- CSRF Token and API endpoints for JS -->
+    <script>
+        const CONFIG = {
+            csrfToken: "{{ csrf_token }}",
+            contactUrl: "{% url 'portfolio:contact_api' %}",
+            aiAssistantUrl: "{% url 'portfolio:ai_assistant_api' %}",
+            githubUsername: "{{ github_username }}"
+        };
+    </script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'portfolio/js/main.js' %}?v=1.2"></script>
+</body>
+</html>
