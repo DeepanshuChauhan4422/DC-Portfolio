@@ -23,13 +23,17 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-fallback-key-chang
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-# ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') if host]
-
-ALLOWED_HOSTS = [
-    'dc-portfolio-cwp8.onrender.com', 
-    'localhost', 
-    '127.0.0.1'
-]
+# Allow hosts from environment variable, with fallback for local and Render deployments
+env_hosts = os.getenv('ALLOWED_HOSTS')
+if env_hosts:
+    ALLOWED_HOSTS = [host.strip() for host in env_hosts.split(',') if host]
+else:
+    ALLOWED_HOSTS = [
+        'dc-portfolio-k38s.onrender.com',
+        'dc-portfolio-cwp8.onrender.com',
+        'localhost',
+        '127.0.0.1'
+    ]
 
 # Application definition
 
