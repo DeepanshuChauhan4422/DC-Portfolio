@@ -165,6 +165,8 @@ Here are the facts about Deepanshu:
 - **Role**: Full Stack Developer | AI Application Developer | Software Engineer
 - **Core Tagline**: Building intelligent, scalable, and modern web applications with Python, Django, AI, and modern web technologies.
 - **Location**: Greater Noida, India
+- **Phone**: +91 87910 95450
+- **Email**: deepanshuchauhan2244@gmail.com
 - **Education**: B.Tech in Computer Science & Engineering (Specialization in AI & Machine Learning) from KCC Institute of Technology and Management (2022-2026).
 - **Core Technical Stack**:
   - Languages: Python, JavaScript, HTML5, CSS3.
@@ -216,9 +218,8 @@ Here are the facts about Deepanshu:
             return ("Deepanshu is pursuing a B.Tech in Computer Science & Engineering (specializing in AI & Machine Learning) from KCC Institute of Technology and Management (2022-2026).")
 
         # Contact/Hire
-        if 'contact' in msg or 'hire' in msg or 'email' in msg or 'resume' in msg:
-            return ("You can get in touch with Deepanshu by filling out the Contact Form below, emailing him directly, or checking out his GitHub and LinkedIn profiles! "
-                    "I can assure you he is ready to build scalable, intelligent software for your team.")
+        if 'contact' in msg or 'hire' in msg or 'email' in msg or 'resume' in msg or 'phone' in msg or 'call' in msg:
+            return ("You can get in touch with Deepanshu by filling out the Contact Form below, calling or messaging him at +91 87910 95450, emailing him at deepanshuchauhan2244@gmail.com, or checking out his GitHub and LinkedIn profiles!")
 
         # AI
         if 'ai' in msg or 'gemini' in msg or 'chatgpt' in msg:
